@@ -15,7 +15,7 @@ export class StarController extends BaseController {
 
     async getAll(req, res, next) {
         try {
-            let stars = await starService.getAll()
+            let stars = await starService.getAll(req.query)
             return res.send(stars)
         } catch (error) {
             next(error)

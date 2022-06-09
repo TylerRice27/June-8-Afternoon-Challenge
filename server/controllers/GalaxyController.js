@@ -9,6 +9,7 @@ export class GalaxyController extends BaseController {
         super('api/galaxies')
         this.router
             .get('', this.getAll)
+            .get('/:id/stars', this.getStars)
             .post('', this.create)
             .delete('/:id', this.remove)
     }
